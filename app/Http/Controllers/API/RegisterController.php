@@ -19,11 +19,8 @@ class RegisterController extends BaseController
     /**
 
      * Register api
-
      *
-
      * @return \Illuminate\Http\Response
-
      */
 
     public function register(Request $request)
@@ -40,13 +37,9 @@ class RegisterController extends BaseController
 
         ]);
 
-
-
         if ($validator->fails()) {
             return $this->sendError('Validation Error.', $validator->errors());
         }
-
-
 
         $input = $request->all();
 
@@ -66,13 +59,9 @@ class RegisterController extends BaseController
 
 
     /**
-
      * Login api
-
      *
-
      * @return \Illuminate\Http\Response
-
      */
 
     public function login(Request $request)

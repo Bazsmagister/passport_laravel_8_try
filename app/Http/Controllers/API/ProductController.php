@@ -31,8 +31,6 @@ class ProductController extends BaseController
     {
         $products = Product::all();
 
-
-
         return $this->sendResponse(ProductResource::collection($products), 'Products retrieved successfully.');
     }
 
@@ -52,8 +50,6 @@ class ProductController extends BaseController
     {
         $input = $request->all();
 
-
-
         $validator = Validator::make($input, [
 
             'name' => 'required',
@@ -69,10 +65,7 @@ class ProductController extends BaseController
         }
 
 
-
         $product = Product::create($input);
-
-
 
         return $this->sendResponse(new ProductResource($product), 'Product created successfully.');
     }
